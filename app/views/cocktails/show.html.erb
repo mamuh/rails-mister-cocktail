@@ -2,16 +2,17 @@
   <h1><%= @cocktail.name %></h1>
 </div>
 
-<div class="ingredients my-4">
+<div class="ingredients my-4 bg-light p-4">
   <h3>Ingredients</h3>
   <%= render "doses/index", doses: @doses %>
 </div>
 
 
-<h5>Add ingredient</h5>
+<div class="add-ingredients p-4 bg-light">
+  <h5>Add ingredient</h5>
+  <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+</div>
 
-<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
 
 
-
-<%= link_to "Home", root_path %>
+<%= link_to "Back to Home", root_path %>
