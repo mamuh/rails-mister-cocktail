@@ -2,10 +2,10 @@
   <h1><%= @cocktail.name %></h1>
 </div>
 
-
-<h3>Ingredients</h3>
-
-<%= render "doses/index", doses: @doses %>
+<div class="ingredients my-4">
+  <h3>Ingredients</h3>
+  <%= render "doses/index", doses: @doses %>
+</div>
 
 
 <h5>Add ingredient</h5>
