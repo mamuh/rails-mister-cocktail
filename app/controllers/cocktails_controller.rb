@@ -3,6 +3,10 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  # def filter
+  #   @cocktails = Cocktail.where(name.include? "")
+  # end
+
   def new
     @cocktail = Cocktail.new
   end
