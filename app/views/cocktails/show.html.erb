@@ -1,11 +1,14 @@
-<h1><%= @cocktail.name %></h1>
+<div class="banner" style="background-image: url(<%= @cocktail.image %>);">
+  <h1><%= @cocktail.name %></h1>
+</div>
+
 
 <h3>Ingredients</h3>
 
 <%= render "doses/index", doses: @doses %>
 
 
-<h4>Add dose</h4>
+<h5>Add ingredient</h5>
 
 <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
 
