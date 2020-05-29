@@ -11,7 +11,7 @@
       <% @cocktails.each do |cocktail| %>
 
         <div class="card-trip mt-3">
-           <%= cl_image_tag cocktail.images.last.key, crop: :fill %>
+           <%= cl_image_tag cocktail.images.first.key, crop: :fill %>
           <div class="card-trip-infos">
             <div>
               <h2><%= cocktail.name %></h2>
