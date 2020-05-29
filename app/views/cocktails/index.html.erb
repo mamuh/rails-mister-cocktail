@@ -3,7 +3,9 @@
 <div class="box">
   <% @cocktails.each do |cocktail| %>
     <div class="card-trip mt-3">
-      <img src="<%= cocktail.image %>" />
+      <% cocktail.images.each do |c| %>
+       <%= cl_image_tag c.key, crop: :fill %>
+      <% end %>
       <div class="card-trip-infos">
         <div>
           <h2><%= cocktail.name %></h2>

@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url(<%= @cocktail.image %>);">
+<div class="banner" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
   <h1><%= @cocktail.name %></h1>
 </div>
 

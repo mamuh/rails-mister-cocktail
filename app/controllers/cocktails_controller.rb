@@ -3,10 +3,6 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  # def filter
-  #   @cocktails = Cocktail.where(name.include? "")
-  # end
-
   def new
     @cocktail = Cocktail.new
   end
@@ -30,6 +26,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :image)
+    params.require(:cocktail).permit(:name, images: [])
   end
 end

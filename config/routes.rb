@@ -3,10 +3,7 @@ Rails.application.routes.draw do
   root to: 'cocktails#index'
 
   resources :cocktails, only: %i[index show new create] do
-    resources :doses, except: [:destroy, :show]
-    collection do
-      get :filter
-    end
+    resources :doses, only: [:create, :index]
   end
 
   resources :doses, only: [:destroy]
