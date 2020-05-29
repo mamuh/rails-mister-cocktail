@@ -1,4 +1,4 @@
-<div class="container" style="color: white;">
+<div class="container mt-5" style="color: white;">
 
   <% if @cocktail.images.first %>
     <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
@@ -17,9 +17,21 @@
   </div>
 
 
-  <div class="add-ingredients p-4 show">
+  <div class="add-ingredients p-4 my-4 show">
     <h5>Add another ingredient</h5>
     <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+  </div>
+
+  <div class="add-ingredients p-4 show">
+    <h3>Reviews</h3>
+    <ul>
+      <% @cocktail.reviews.each do |review| %>
+        <li><%= review.content %></li>
+      <% end %>
+    </ul>
+
+    <h5>Add a review</h5>
+    <%= render "reviews/new", cocktail: @cocktail, review: @review %>
   </div>
 
   <%= link_to "Back to Home", root_path, class: "btn btn-primary my-4" %>
