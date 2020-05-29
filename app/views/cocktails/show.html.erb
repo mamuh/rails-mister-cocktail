@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="color: white;">
 
   <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
     <h1><%= @cocktail.name %></h1>
@@ -11,9 +11,9 @@
 
 
   <div class="add-ingredients p-4 show">
-    <h5>Add ingredient</h5>
+    <h5>Add another ingredient</h5>
     <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
   </div>
 
-  <%= link_to "Back to Home", root_path, class: "btn btn-success" %>
+  <%= link_to "Back to Home", root_path, class: "btn btn-primary my-4" %>
 </div>
