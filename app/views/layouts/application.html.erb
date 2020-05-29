@@ -10,12 +10,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: #09090B; color: white;">
 
     <%= render "shared/nav" %>
-    <div class="container mt-2">
-      <%= yield %>
-    </div>
+    <%= yield %>
 
   </body>
 </html>

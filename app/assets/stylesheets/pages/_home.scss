@@ -5,10 +5,15 @@ body {
 
 .card-trip {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #3c3c49;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
   width: 17rem;
   align-self: center;
+  color: white;
+}
+
+.card-trip a {
+  color: white;
 }
 
 .card-trip > img {
@@ -44,5 +49,41 @@ body {
   grid-gap: 2rem;
   align-items: center;
   padding: 2rem 2rem;
-  justify-items: center;
+  justify-content: center;
 }
+
+.master {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+
+.top {
+  text-align: center;
+}
+
+/*
+.banner {
+  width: 100vw;
+  height: 60vh;
+  background-color: #070709;
+  background-size: cover;
+  text-align: center;
+  padding: 150px 0;
+  background-position: center;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}*/
+

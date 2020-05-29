@@ -1,18 +1,19 @@
-<div class="banner" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
-  <h1><%= @cocktail.name %></h1>
+<div class="container">
+
+  <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+
+  <div class="show ingredients my-4 p-4">
+    <h3>Ingredients</h3>
+    <%= render "doses/index", doses: @doses %>
+  </div>
+
+
+  <div class="add-ingredients p-4 show">
+    <h5>Add ingredient</h5>
+    <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+  </div>
+
+  <%= link_to "Back to Home", root_path, class: "btn btn-success" %>
 </div>
-
-<div class="ingredients my-4 bg-light p-4">
-  <h3>Ingredients</h3>
-  <%= render "doses/index", doses: @doses %>
-</div>
-
-
-<div class="add-ingredients p-4 bg-light">
-  <h5>Add ingredient</h5>
-  <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-</div>
-
-
-
-<%= link_to "Back to Home", root_path %>
