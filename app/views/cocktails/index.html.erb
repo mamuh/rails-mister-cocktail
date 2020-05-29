@@ -11,7 +11,11 @@
       <% @cocktails.each do |cocktail| %>
 
         <div class="card-trip mt-3">
-           <%= cl_image_tag cocktail.images.first.key, crop: :fill %>
+          <% if cocktail.images.first %>
+          <%= cl_image_tag cocktail.images.first.key, crop: :fill %>
+          <% else %>
+          <img src="https://www.amathusdrinks.com/SupplyImages/WF20003/Our%20Brands.jpg">
+          <% end %>
           <div class="card-trip-infos">
             <div>
               <h2><%= cocktail.name %></h2>

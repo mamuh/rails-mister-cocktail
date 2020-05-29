@@ -1,8 +1,15 @@
 <div class="container" style="color: white;">
 
-  <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
-    <h1><%= @cocktail.name %></h1>
-  </div>
+  <% if @cocktail.images.first %>
+    <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+
+  <% else %>
+    <div class="show show-main" style="background-image: url('https://www.amathusdrinks.com/SupplyImages/WF20003/Our%20Brands.jpg')">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+  <% end %>
 
   <div class="show ingredients my-4 p-4">
     <h3>Ingredients</h3>
