@@ -10,7 +10,7 @@
         <div class="card-trip mt-3">
           <% if cocktail.images.first %>
             <%= link_to cocktail_path(cocktail) do %>
-              <%= cl_image_tag cocktail.images.first.key, crop: :fill %>
+              <%= cl_image_tag cocktail.images.first.key, crop: :fill, width: 300 %>
             <% end %>
           <% else %>
             <%= link_to cocktail_path(cocktail) do %>
