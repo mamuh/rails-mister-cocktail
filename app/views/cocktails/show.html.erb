@@ -1,7 +1,7 @@
 <div class="container mt-5" style="color: white;">
 
   <% if @cocktail.images.first %>
-    <div class="show show-main" style="background-image: url('<%= cl_image_path @cocktail.images.first.key %>')">
+    <div class="show show-main" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.images.first.key %>')">
       <h1><%= @cocktail.name %></h1>
     </div>
 
