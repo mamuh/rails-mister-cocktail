@@ -13,7 +13,9 @@
               <%= cl_image_tag cocktail.images.first.key, crop: :fill %>
             <% end %>
           <% else %>
-            <img src="https://www.amathusdrinks.com/SupplyImages/WF20003/Our%20Brands.jpg">
+            <%= link_to cocktail_path(cocktail) do %>
+              <img src="https://www.amathusdrinks.com/SupplyImages/WF20003/Our%20Brands.jpg">
+            <% end %>
           <% end %>
           <div class="card-trip-infos">
             <div>
