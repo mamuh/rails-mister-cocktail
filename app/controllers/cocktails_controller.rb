@@ -25,6 +25,10 @@ class CocktailsController < ApplicationController
     @review = Review.new
   end
 
+  def search
+    @cocktails = Cocktail.where(name.includes? params[:name])
+  end
+
   private
 
   def cocktail_params
