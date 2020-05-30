@@ -1,10 +1,10 @@
-<div class="container" style="color: white; width: 60vw;">
-  <div class="new-form mt-5 p-5">
-    <h1>New cocktail</h1>
+<div class="container d-flex justify-content-center">
+  <div class="new-form mt-5 p-3">
+    <h1 class="mt-2">New cocktail</h1>
     <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name %>
-      <%= f.input :images, as: :file, input_html: { multiple: true } %>
-      <%= f.submit %>
+      <%= f.input :images, as: :file, input_html: { multiple: true }%>
+      <%= f.submit class: "btn btn-success" %>
     <% end %>
   </div>
 </div>

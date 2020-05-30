@@ -1,0 +1,19 @@
+#file-upload-button {
+  background-color: #112135;
+}
+
+.new-form {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #606872;
+  margin-top: 100px !important;
+  color: white;
+  width: 70%;
+}
+
+
+@media(max-width: 700px) {
+  .new-form {
+    width: 95%;
+  }
+}
