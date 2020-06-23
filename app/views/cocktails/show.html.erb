@@ -1,10 +1,9 @@
-<div class="container mt-5" style="color: white;">
+<div class="container show-container mt-5" style="color: white;">
 
   <% if @cocktail.images.first %>
     <div class="show show-main" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= cl_image_path(@cocktail.images.first.key, crop: :fill) %>')">
       <h1><%= @cocktail.name %></h1>
     </div>
-
   <% else %>
     <div class="show show-main" style="background-image: url('https://www.amathusdrinks.com/SupplyImages/WF20003/Our%20Brands.jpg')">
       <h1><%= @cocktail.name %></h1>
@@ -36,3 +35,11 @@
 
   <%= link_to "Back to Home", root_path, class: "btn btn-primary my-4" %>
 </div>
+
+
+<style type="text/css">
+  .show-container {
+    max-width: 80%;
+    overflow-x: hidden;
+  }
+</style>
