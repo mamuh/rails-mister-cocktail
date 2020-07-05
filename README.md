@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Mr. Cocktail
+Web app where you can add cocktail recipes with pictures and add dosages to them with their respective ingredients. 
+Built on Rails 6 and used select2 JS Library for listing ingredients + cloudinary for uploading pictures.
